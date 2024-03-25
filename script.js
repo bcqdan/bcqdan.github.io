@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
       velocityY *= 0.96;
 
       // Boundary checking for the window, reverse direction if it hits the edge
-      if (posX <= 0 || posX >= window.innerWidth - cursor.offsetWidth) {
+      if (posX <= 10 || posX >= window.innerWidth - cursor.offsetWidth - 10) {
           velocityX *= -1;
       }
-      if (posY <= 0 || posY >= window.innerHeight - cursor.offsetHeight) {
+      if (posY <= 10 || posY >= window.innerHeight - cursor.offsetHeight - 10) {
           velocityY *= -1;
       }
 
