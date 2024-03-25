@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
       posY += velocityY;
 
       // Implement damping to eventually stop the cursor
-      velocityX *= 0.96;
-      velocityY *= 0.96;
+      velocityX *= 0.99;
+      velocityY *= 0.99;
 
       // Boundary checking for the window, reverse direction if it hits the edge
       if (posX <= 10 || posX >= window.innerWidth - cursor.offsetWidth - 10) {
@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (posY <= 10 || posY >= window.innerHeight - cursor.offsetHeight - 10) {
           velocityY *= -1;
       }
+
+      posX = Math.max(10, Math.min(window.innerWidth - cursor.offsetWidth - 10, posX));
+      posY = Math.max(10, Math.min(window.innerHeight - cursor.offsetHeight - 10, posY));
 
       // Update cursor position
       cursor.style.left = posX + 'px';

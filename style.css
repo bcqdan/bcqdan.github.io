@@ -1,16 +1,14 @@
 html, body {
   cursor: none;
   height: 100%;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  background-color: black; /* Set background color to black */
+  background-color: black; /* Set the background color to black */
 }
 
 #cursor {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: red;
+  background-color: white;
   pointer-events: none; /* Ignore the custom cursor for mouse events */
 }
